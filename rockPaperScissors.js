@@ -25,3 +25,59 @@
 // -make sure that human choice logic is case-insensitive (rock, RoCK, RocK, ROCK should all work equally well)
 // -Should console.log a message like "You win! Rock beats scissors")
 // -increment the human/computer score based on winner
+
+//console.log ("HelloWorld");
+
+function getComputerChoice(){
+    let getComputerChoice = Math.random()
+    if (getComputerChoice >= 0 && getComputerChoice < .3333333333333334)
+        return("paper")
+    if (getComputerChoice >.3333333333333334 && getComputerChoice <= .6666666666666667) 
+        return ("rock")
+    if (getComputerChoice > .6666666666666667 && getComputerChoice <= 1) 
+        return("scissors")
+    console.log(getComputerChoice)
+}
+
+
+
+
+function getHumanChoice(){
+    let Humanchoice = prompt("Rock, paper, scissors");
+    console.log(Humanchoice);
+    return Humanchoice;
+
+}
+
+//getHumanChoice();
+
+
+
+let humanscore = 0
+let computerscore = 0
+
+
+
+
+function playRound(HumanChoice, ComputerChoice){
+    if (HumanChoice == "rock" && ComputerChoice == "paper"){
+        console.log("Human Win")}
+    if (HumanChoice == "paper" && ComputerChoice == "rock"){
+        console.log("Computer Win")}
+    if (ComputerChoice == "scissors" && HumanChoice == "rock"){
+        console.log("Human Win")}
+    if (ComputerChoice == "rock" && HumanChoice == "scissors"){
+        console.log("Computer Win")}
+    if (ComputerChoice == "paper" && HumanChoice == "scissors"){
+        console.log("Human Win")}
+    if (ComputerChoice == "scissors" && HumanChoice == "paper"){
+        console.log("Computer Win")}
+    if (ComputerChoice == HumanChoice){
+        console.log("Draw")}
+}
+
+playRound(getHumanChoice(), getComputerChoice())
+
+
+
+

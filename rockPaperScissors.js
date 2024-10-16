@@ -61,17 +61,17 @@ let computerscore = 0
 
 function playRound(HumanChoice, ComputerChoice){
     if (HumanChoice == "rock" && ComputerChoice == "paper"){
-        console.log("Human Win")}
+        console.log("Computer Win paper beats rock")}
     if (HumanChoice == "paper" && ComputerChoice == "rock"){
-        console.log("Computer Win")}
+        console.log("Human Win paper beats rock")}
     if (ComputerChoice == "scissors" && HumanChoice == "rock"){
-        console.log("Human Win")}
+        console.log("Human Win rock beats scissors")}
     if (ComputerChoice == "rock" && HumanChoice == "scissors"){
-        console.log("Computer Win")}
+        console.log("Computer Win rock beats scissors")}
     if (ComputerChoice == "paper" && HumanChoice == "scissors"){
-        console.log("Human Win")}
+        console.log("Human Win scissors beats paper")}
     if (ComputerChoice == "scissors" && HumanChoice == "paper"){
-        console.log("Computer Win")}
+        console.log("Computer Win scissors beats paper")}
     if (ComputerChoice == HumanChoice){
         console.log("Draw")}
 }
